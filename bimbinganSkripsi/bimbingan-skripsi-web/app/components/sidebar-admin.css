@@ -1,0 +1,126 @@
+/* /app/components/sidebar.css */
+
+.sidebar {
+    width: 260px; /* Lebar Sidebar agar tidak menutupi konten */
+    background: #c9dff5; /* Warna latar belakang biru muda sesuai gambar */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    height: 100vh; /* Tinggi penuh layar */
+    position: sticky; /* Tetap di tempat saat di-scroll */
+    top: 0;
+    flex-shrink: 0; /* Mencegah sidebar menyusut */
+  }
+  
+  .sidebar-top {
+    padding: 0 20px;
+  }
+  
+  .sidebar-top h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .sidebar-top > img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .menu-list li {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #555;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* Warna saat menu dipilih (Active) */
+  .menu-list li.active {
+    background: #a0c4ff; 
+    color: #1a1a1a;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .menu-list li:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Bagian Bawah Sidebar (User Profile) */
+  .sidebar-bottom {
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .user-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .avatar {
+    width: 45px;
+    height: 45px;
+    background: #4a90e2; /* Biru cerah untuk avatar */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .name {
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .role {
+    font-size: 11px;
+    color: #666;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Tombol Logout Merah */
+  .logout {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .logout:hover {
+    background: #dc3545;
+    color: white;
+  }

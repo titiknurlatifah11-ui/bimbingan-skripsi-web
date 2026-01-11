@@ -1,0 +1,134 @@
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* ===== CONTENT ===== */
+  .dosen-content {
+    margin-left: 260px;
+    padding: 40px;
+    flex: 1;
+    background-color: #f0f4ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ===== BANNER ===== */
+  .profile-header-banner {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #b8d4f4;
+    padding: 24px;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-header-banner h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .profile-header-banner p {
+    margin: 6px 0 0;
+    font-size: 14px;
+  }
+  
+  /* ===== CARD ===== */
+  .profile-card-main {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #b8d4f4;
+  }
+  
+  /* GRID KIRI - KANAN */
+  .profile-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* ===== KOLOM INFO ===== */
+  .profile-info-column {
+    flex: 1;
+  }
+  
+  .info-item {
+    margin-bottom: 25px;
+  }
+  
+  .info-item label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  
+  .info-item p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1.5px solid #b8d4f4;
+    padding-bottom: 8px;
+    margin: 0;
+    width: 85%;
+  }
+  
+  /* ===== STATUS ===== */
+  .status-badge-active {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2d6a4f;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+  
+  /* ===== FOTO ===== */
+  .profile-photo-column {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .photo-wrapper {
+    width: 180px;
+    height: 180px;
+    border: 2px dashed #b8d4f4;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8faff;
+    margin-bottom: 15px;
+  }
+  
+  .photo-wrapper svg {
+    width: 90px;
+    color: #b8d4f4;
+  }
+  
+  .photo-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  /* ===== LOADING ===== */
+  .loading-screen {
+    padding: 50px;
+    font-size: 18px;
+    text-align: center;
+  }
+  

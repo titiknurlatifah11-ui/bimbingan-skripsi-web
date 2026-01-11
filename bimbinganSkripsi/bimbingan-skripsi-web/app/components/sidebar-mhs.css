@@ -1,0 +1,172 @@
+.sidebar-mhs-container {
+    width: 260px;
+    height: 100vh;
+    background-color: #B8D4F4; /* Warna biru sidebar mahasiswa */
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    position: fixed; /* Tetap di kiri saat scroll */
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+/* Container utama konten setelah sidebar */
+.dashboard-content {
+    margin-left: 260px; /* Memberi ruang untuk sidebar fixed */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menarik semua elemen anak ke tengah secara horizontal */
+    min-height: 100vh;
+    background-color: #F8FAFF;
+}
+
+/* Pembungkus agar semua elemen memiliki lebar yang seragam dan berada di tengah */
+.welcome-banner, 
+.main-stats-card, 
+.bottom-grid {
+    width: 100%;
+    max-width: 900px; /* Membatasi lebar agar tidak terlalu melebar di layar besar */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Khusus untuk banner agar teksnya juga di tengah */
+.welcome-banner {
+    background-color: #D1E3F8;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Penyesuaian Grid bawah agar tetap simetris */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Bagian Logo Atas */
+.sidebar-mhs-logo-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mhs-logo-img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.mhs-brand-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+}
+
+.mhs-brand-tagline {
+    font-size: 11px;
+    color: #555;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Navigasi Menu - Memperbaiki teks menumpuk */
+.sidebar-mhs-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Jarak antar item menu */
+    flex: 1;
+}
+
+.nav-mhs-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    gap: 15px; /* Jarak antara ikon dan teks */
+}
+
+.nav-mhs-item:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-mhs-item.active {
+    background-color: rgba(255, 255, 255, 0.6);
+    font-weight: 700;
+}
+
+.nav-mhs-icon {
+    font-size: 18px;
+    min-width: 25px; /* Menjaga ikon tetap sejajar */
+}
+
+/* Bagian Profil & Logout Bawah */
+.sidebar-mhs-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+}
+
+.mhs-profile-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.mhs-avatar {
+    width: 42px;
+    height: 42px;
+    background-color: #D1D1D1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.mhs-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mhs-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.mhs-role {
+    font-size: 11px;
+    color: #666;
+    margin: 0;
+}
+
+.mhs-logout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2; /* Warna tombol logout biru cerah */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.mhs-logout-btn:hover {
+    background-color: #357ABD;
+}

@@ -1,0 +1,150 @@
+/* /app/admin/dosen/dosen.css */
+
+/* Container Utama Profil */
+.profile-edit-container {
+    background: #E0E7FF; /* Warna biru pucat sesuai gambar */
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin: 0 auto; /* Tengah secara horizontal */
+}
+
+.profile-header-bar {
+    background: #B8D4F4;
+    padding: 12px 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #2b5797;
+    margin-bottom: 30px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.header-icons button:hover {
+    transform: scale(1.2);
+}
+
+.profile-content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+.form-group-custom {
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #999; /* Garis bawah tegas sesuai gambar */
+}
+
+.form-group-custom label {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-group-custom input, .form-group-custom select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    outline: none;
+    color: #2b5797;
+    font-weight: bold;
+}
+
+.profile-right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-avatar-placeholder {
+    width: 180px;
+    height: 180px;
+    background: #B8D4F4;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.edit-btn-text {
+    margin-top: 10px;
+    background: #D1E3F8;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #2b5797;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.save-btn-large {
+    margin-top: auto; /* Mendorong ke bawah */
+    background: #B8D4F4;
+    border: none;
+    padding: 15px 80px;
+    border-radius: 15px;
+    font-weight: 800;
+    color: #2b5797;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.save-btn-large:hover { 
+    background: #2b5797; 
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Tambahkan di dosen.css */
+.form-group-custom select {
+    cursor: pointer;
+    appearance: none; /* Hilangkan panah default browser */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2003/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%232b5797' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px; /* Sesuaikan dengan container */
+}
+
+.profile-avatar-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+}

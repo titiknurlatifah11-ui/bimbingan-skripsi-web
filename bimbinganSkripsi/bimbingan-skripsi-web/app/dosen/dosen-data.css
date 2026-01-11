@@ -1,0 +1,279 @@
+/* ============================================================
+   1. LAYOUT UTAMA (SHARED)
+   ============================================================ */
+   .dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F8FAFF;
+}
+
+/* Area konten di sebelah kanan sidebar */
+.dashboard-content, .dosen-profile-content {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Konten di tengah secara horizontal */
+}
+
+/* Banner Biru di bagian atas */
+.header-banner-dosen, .profile-header-bar {
+    background-color: #D1E3F8;
+    width: 100%;
+    max-width: 900px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* ============================================================
+   2. DATA MAHASISWA (Tampilan Form untuk Dosen)
+   ============================================================ */
+.profile-container {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.profile-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.profile-form {
+    flex: 2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+/* ===============================
+   SEARCH DROPDOWN MAHASISWA
+   =============================== */
+
+   .search-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    z-index: 100;
+    overflow: hidden;
+    animation: fadeDown 0.2s ease;
+  }
+  
+  .search-item {
+    padding: 12px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search-item:hover {
+    background-color: #f0f4ff;
+  }
+  
+  /* Animasi halus */
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/* Grup Input Topik & Tombol Upload Review */
+.topic-group {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.topic-input {
+    flex: 2; /* Input topik memanjang */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.upload-review-btn {
+    flex: 1; /* Tombol tidak terlalu lebar */
+    background-color: #7B9FF2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 0 15px;
+}
+
+/* ============================================================
+   3. DATA PROFIL DOSEN (Tampilan Underline)
+   ============================================================ */
+.profile-main-card {
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+  
+
+.info-field {
+    margin-bottom: 30px;
+}
+
+.info-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.underline-text {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    width: 85%;
+    font-size: 15px;
+    color: #555;
+}
+
+/* ============================================================
+   4. BAGIAN FOTO & AKSI (SHARED)
+   ============================================================ */
+.photo-section-dosen, .profile-photo-section {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.photo-frame, .photo-box {
+    width: 180px;
+    height: 180px;
+    background-color: #D1E3F8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid #a7c7e7;
+    overflow: hidden;
+}
+
+.user-icon {
+    font-size: 100px;
+    opacity: 0.5;
+}
+
+/* Tombol kecil di pojok foto */
+.action-small-btns {
+    display: flex;
+    flex-direction: row; /* Berjejer ke samping */
+    justify-content: center;
+    gap: 10px;
+    width: 100%; /* Mengikuti lebar parent */
+}
+
+.action-small-btns button, .icon-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D1E3F8;
+    border: 1px solid #a7c7e7;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.action-small-btns button:hover {
+    background-color: #a7c7e7;
+    transform: translateY(-2px); /* Efek angkat sedikit saat hover */
+}
+
+/* ============================================================
+   5. SEARCH BAR & BUTTONS
+   ============================================================ */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 15px;
+    border: 2px solid #D1E3F8;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.search-bar-container {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 20px;
+    align-self: flex-start; /* Tetap di kiri area konten */
+}
+
+.search-icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #4A90E2;
+}
+
+.search-input {
+    border: none !important;
+    background: transparent !important;
+    width: 100%;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #2b5797;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.save-btn:hover { background-color: #1a3a6d; }
+

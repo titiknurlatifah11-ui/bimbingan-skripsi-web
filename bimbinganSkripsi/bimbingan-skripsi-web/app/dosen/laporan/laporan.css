@@ -1,0 +1,153 @@
+/* 1. Pastikan container utama menutup seluruh layar */
+.dashboard-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Mencegah scroll double */
+    background-color: #F8FAFF;
+}
+
+/* 2. Area Putih (Laporan Content) */
+.laporan-content {
+    position: relative;
+    flex-grow: 1; /* Mengambil sisa ruang setelah sidebar */
+    height: 100vh;
+    overflow-y: auto; /* Scroll hanya di area putih */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* MENARIK SEMUA KE TENGAH AREA PUTIH */
+}
+
+/* 3. Card Banner Judul (Meniru profil yang sudah Anda buat) */
+.profile-header-banner {
+    background-color: #D1E3F8;
+    width: 100%;
+    max-width: 1000px; /* Batas lebar agar seimbang */
+    padding: 20px;
+    border-radius: 50px; /* Membuat bentuk kapsul sesuai gambar */
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.profile-header-banner h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 4. Grid Laporan 3 Kolom */
+.laporan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px; /* Menjaga kolom tetap di tengah area putih */
+}
+
+/* 5. Styling Kolom (Putih Bersih) */
+.laporan-column {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    min-height: 500px;
+    border: 1px solid #E6EEFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header di dalam kolom */
+.laporan-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #444;
+}
+
+/* Garis Biru Tipis di bawah judul kolom */
+.column-divider {
+    height: 2px;
+    background: #D1E3F8;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Styling Kartu Mahasiswa di Laporan */
+.laporan-item-card {
+    background: #F0F7FF;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #2D9CDB;
+    transition: transform 0.2s;
+}
+
+.laporan-item-card:hover {
+    transform: translateY(-3px);
+}
+
+.mhs-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.topic {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 11px;
+    color: #999;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Container Tombol Aksi */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-approve, .btn-revise {
+    flex: 1;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-approve {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.btn-approve:hover {
+    background-color: #2E7D32;
+    color: white;
+}
+
+.btn-revise {
+    background-color: #FFF3E0;
+    color: #E65100;
+}
+
+.btn-revise:hover {
+    background-color: #E65100;
+    color: white;
+}
+
+/* Warna Khusus untuk Kartu yang Sudah Selesai */
+.laporan-item-card.approved { border-left-color: #4CAF50; }
+.laporan-item-card.revision { border-left-color: #FF9800; }

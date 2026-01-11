@@ -1,0 +1,111 @@
+/* /components/sidebar.css */
+
+.sidebar {
+  width: 260px; /* Lebar Sidebar */
+  background: #c9dff5; /* Warna latar belakang Sidebar */
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Menempatkan top dan bottom di kedua ujung */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  height: 100vh; /* Tinggi penuh viewport */
+  position: sticky; /* Agar tetap di tempat saat scroll */
+  top: 0;
+}
+
+.sidebar-top {
+  padding: 0 20px;
+}
+
+.sidebar-top h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sidebar-top > img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-list li {
+  padding: 12px 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #555;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-list li.active {
+  background: #a0c4ff; /* Warna active menu */
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.menu-list li:hover:not(.active) {
+  background: #e9ecef;
+}
+
+/* Bagian Bawah Sidebar */
+.sidebar-bottom {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #4a90e2; /* Warna Avatar */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.name {
+  font-weight: bold;
+  margin: 0;
+  font-size: 14px;
+}
+
+.role {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+.logout {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logout:hover {
+  background: #dc3545;
+  color: white;
+}

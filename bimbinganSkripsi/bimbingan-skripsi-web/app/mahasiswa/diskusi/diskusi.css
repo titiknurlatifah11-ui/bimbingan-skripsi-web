@@ -1,0 +1,174 @@
+/* 1. LAYOUT UTAMA */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* 2. AREA KONTEN UTAMA (MAHASISWA) */
+.diskusi-main-content {
+    flex: 1;
+    /* PENTING: Geser konten ke kanan sejauh lebar sidebar (260px) agar tidak tertutup */
+    margin-left: 260px; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8FAFF;
+    min-width: 0; /* Menghindari konten pecah pada layar kecil */
+}
+
+/* 3. HEADER BANNER (IDENTITAS DOSEN) */
+.diskusi-header-section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.diskusi-header-card {
+    /* Gradient disesuaikan agar teks putih terlihat jelas */
+    background: linear-gradient(135deg, #B8D4F4 0%, #D1E3F8 100%);
+    border-radius: 15px;
+    padding: 25px 35px;
+    width: 100%; /* Melebar rata kiri-kanan */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.mhs-label { 
+    font-size: 11px; 
+    color: #1e2a5a !important;; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.nama-dosen-aktif { 
+    margin: 5px 0; 
+    color: #1e2a5a !important; 
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+.mhs-nim { 
+    font-size: 14px; 
+    color: #1e2a5a !important;; 
+}
+
+/* 4. CONTAINER CHAT UTAMA */
+.chat-main-container {
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Memenuhi sisa layar ke bawah */
+    width: 100%; /* Melebar rata kiri-kanan */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #eef2f7;
+    overflow: hidden;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fcfdfe;
+}
+
+/* 5. LOGIKA BUBBLE CHAT */
+.chat-wrapper { display: flex; gap: 12px; max-width: 80%; }
+
+/* Mahasiswa (Anda) di KANAN */
+.chat-wrapper.pembimbing { 
+    align-self: flex-end; 
+    flex-direction: row-reverse; 
+}
+
+/* Dosen di KIRI */
+.chat-wrapper.mahasiswa { 
+    align-self: flex-start; 
+}
+
+.chat-avatar {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color: white; 
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Warna Avatar (Mahasiswa Hijau, Dosen Biru) */
+.chat-wrapper.pembimbing .chat-avatar { background-color: #27ae60; }
+.chat-wrapper.mahasiswa .chat-avatar { background-color: #4A90E2; }
+
+.chat-content { display: flex; flex-direction: column; }
+.pembimbing .chat-content { align-items: flex-end; }
+
+.sender-name { font-size: 11px; font-weight: bold; color: #888; margin-bottom: 4px; }
+
+.bubble { 
+    padding: 12px 18px; 
+    border-radius: 15px; 
+    font-size: 14.5px; 
+    line-height: 1.5;
+}
+
+/* Bubble Dosen (Kiri) */
+.chat-wrapper.mahasiswa .bubble { 
+    background-color: #f1f3f9; 
+    color: #333; 
+    border-top-left-radius: 2px;
+}
+
+/* Bubble Anda (Kanan) */
+.chat-wrapper.pembimbing .bubble { 
+    background-color: #4A90E2; 
+    color: white; 
+    border-top-right-radius: 2px;
+}
+
+.chat-time {
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+/* 6. AREA INPUT PESAN */
+.chat-input-area { 
+    padding: 20px 30px; 
+    display: flex; 
+    gap: 15px; 
+    background: white; 
+    border-top: 1px solid #eee; 
+}
+
+.chat-input-area input { 
+    flex: 1; 
+    padding: 12px 20px; 
+    border-radius: 10px; 
+    border: 1px solid #ddd; 
+    outline: none; 
+    transition: 0.3s;
+}
+
+.chat-input-area input:focus { border-color: #4A90E2; }
+
+.send-btn { 
+    background: #4A90E2; 
+    color: white; 
+    border: none; 
+    padding: 0 25px; 
+    border-radius: 10px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.send-btn:hover { background: #357ABD; transform: translateY(-2px); }
+
+.empty-chat { text-align: center; color: #aaa; margin-top: 50px; font-style: italic; }

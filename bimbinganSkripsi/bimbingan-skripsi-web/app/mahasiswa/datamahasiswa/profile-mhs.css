@@ -1,0 +1,182 @@
+/* Layout Utama Konten */
+.profile-content {
+    margin-left: 260px; /* Jarak dari sidebar */
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8FAFF;
+}
+
+/* Header Banner */
+.header-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 25px;
+}
+
+.title-banner {
+    flex: 1;
+    background-color: #D1E3F8;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #1e2a5a;
+}
+
+/* Kartu Profil Utama */
+.profile-main-card {
+    display: flex;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    gap: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #D1E3F8;
+}
+
+/* Sisi Kiri: Formulir */
+.profile-form {
+    flex: 2;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e2a5a;
+    margin-bottom: 8px;
+}
+
+.display-value {
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #666; /* Garis bawah sesuai gambar */
+    width: 95%;
+}
+
+/* Sisi Kanan: Foto dan Aksi */
+.profile-right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.photo-box {
+    width: 180px;
+    height: 180px;
+    background: #D1E3F8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.user-icon-large {
+    font-size: 80px;
+    opacity: 0.5;
+}
+
+/* Container Ikon Aksi (Tambah, Edit, Hapus) di Bawah Foto */
+.action-icons-vertical {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    background: #f0f4ff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+.icon-btn {
+    background: white;
+    border: 1px solid #D1E3F8;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background: #eef2ff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Container dan Tombol Simpan */
+.save-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.save-btn {
+    padding: 12px 50px;
+    background-color: #D1E3F8;
+    color: #1e2a5a;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #b8d4f4;
+}
+
+.edit-input {
+    width: 95%;
+    font-size: 16px;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 2px solid #4e73df; /* Warna biru saat edit */
+    background: transparent;
+    outline: none;
+    color: #333;
+    font-family: inherit;
+}
+
+.display-value.disabled {
+    color: #888;
+    border-bottom: 1.5px solid #eee;
+}
+
+.profile-img-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.icon-btn.active-edit {
+    background: #4e73df;
+    color: white;
+    border-color: #4e73df;
+}
+
+.save-btn:disabled {
+    background-color: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}

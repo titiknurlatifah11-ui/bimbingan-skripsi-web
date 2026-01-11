@@ -1,0 +1,163 @@
+/* Layout Wrapper */
+.diskusi-content-wrapper {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8FAFF;
+    min-height: 100vh;
+}
+
+/* Header Section (Dropdown & Header Card) */
+.diskusi-header-section {
+    width: 100%; /* Memenuhi lebar container */
+    margin-bottom: 20px;
+}
+
+.selector-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mhs-dropdown {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #B8D4F4;
+    background-color: white;
+    font-size: 14px;
+    color: #1e2a5a;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.diskusi-header-card {
+    background: linear-gradient(135deg, #B8D4F4 0%, #D1E3F8 100%);
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 100%; /* Lebar rata kiri-kanan */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.mhs-label { font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+.info-mhs h3 { margin: 5px 0; color: #1e2a5a; font-size: 20px; }
+.mhs-nim { font-size: 14px; color: #555; }
+
+/* Chat Container */
+.chat-main-container {
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Mengambil sisa tinggi layar agar box besar */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #eef2f7;
+    width: 100%; /* Lebar rata kiri-kanan */
+    margin-top: 10px;
+}
+
+.chat-box {
+    flex: 1; /* Chat box memanjang ke bawah */
+    min-height: 400px;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fcfdfe;
+}
+
+/* Scrollbar */
+.chat-box::-webkit-scrollbar { width: 6px; }
+.chat-box::-webkit-scrollbar-thumb { background: #d1d9e6; border-radius: 10px; }
+
+/* Bubble Chat Logic */
+.chat-wrapper { display: flex; gap: 12px; max-width: 80%; }
+.chat-wrapper.mahasiswa { align-self: flex-start; }
+.chat-wrapper.pembimbing { align-self: flex-end; flex-direction: row-reverse; }
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #4A90E2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.chat-wrapper.mahasiswa .chat-avatar { background-color: #5c6bc0; }
+
+.chat-content { display: flex; flex-direction: column; }
+.pembimbing .chat-content { align-items: flex-end; }
+
+.sender-name { font-size: 11px; font-weight: 700; color: #888; margin-bottom: 4px; }
+
+.bubble {
+    padding: 12px 18px;
+    border-radius: 15px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.chat-wrapper.mahasiswa .bubble {
+    background-color: #f1f3f9;
+    color: #333;
+    border-top-left-radius: 2px;
+}
+
+.chat-wrapper.pembimbing .bubble {
+    background-color: #4A90E2;
+    color: white;
+    border-top-right-radius: 2px;
+}
+
+.chat-time {
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+/* Chat Input Area */
+.chat-input-area {
+    padding: 20px 30px;
+    background: white;
+    border-top: 1px solid #f0f3f7;
+    display: flex;
+    gap: 15px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    border: 1px solid #eef2f7;
+    background-color: #f8fafc;
+    padding: 12px 20px;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.chat-input-area input:focus { border-color: #4A90E2; background-color: white; }
+
+.send-btn {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover { background: #357ABD; transform: translateY(-2px); }
+
+.empty-chat { text-align: center; color: #aaa; margin-top: 50px; font-style: italic; }
+.bold-text { font-weight: bold; color: #1e2a5a; }

@@ -1,0 +1,126 @@
+/* Banner Judul Atas agar rapi dan simetris */
+.header-banner-mahasiswa {
+    background-color: #D1E3F8; /* Warna biru muda yang konsisten */
+    width: 100%;
+    max-width: 1100px; /* Menyesuaikan lebar grid di bawahnya */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Shadow halus agar terlihat modern */
+}
+
+.header-banner-mahasiswa h3 {
+    margin: 0;
+    color: #1e2a5a;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.header-banner-mahasiswa p {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Pastikan dashboard-content meratakan banner ke tengah */
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Meratakan banner dan grid ke tengah secara horizontal */
+    padding: 40px;
+}
+
+/* Penyesuaian Laporan Grid agar selaras dengan banner */
+.laporan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    align-items: start;
+}
+
+.laporan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.laporan-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-height: 400px;
+}
+
+.laporan-card h4 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.title-waiting { color: #f39c12; }
+.title-approved { color: #27ae60; }
+.title-revision { color: #e74c3c; }
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-bimbingan {
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #ccc;
+}
+
+.item-bimbingan.approved { border-left-color: #27ae60; background: #f1faf5; }
+.item-bimbingan.revision { border-left-color: #e74c3c; background: #fdf2f2; }
+
+.empty-state {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-download-small {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #4e73df;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+
+.date-tag {
+    font-size: 11px;
+    color: #888;
+    background: #eee;
+    padding: 2px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.item-bimbingan strong {
+    font-size: 14px;
+    color: #333;
+    /* Memotong teks jika terlalu panjang agar tidak merusak layout */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

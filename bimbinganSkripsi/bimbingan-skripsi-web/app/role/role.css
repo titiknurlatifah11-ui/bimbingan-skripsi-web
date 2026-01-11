@@ -1,0 +1,65 @@
+.role-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f5c6d6, #c7b9ff);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px; /* supaya naik ke atas */
+  }
+  
+  .role-box {
+    background: #d6e4ff;
+    width: 900px;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+  
+  .role-header img {
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  
+  .subtitle {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  
+  .role-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .role-card {
+    width: 250px;
+    background: #c6d8ff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .role-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .role-label {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background: white;
+    padding: 8px 0;
+    width: 80%;
+    border-radius: 10px;
+  }
+  
