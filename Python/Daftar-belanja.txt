@@ -1,0 +1,5 @@
+Daftar belanja ibu: 
+1. cabai
+2. bawang
+3. garam
+4. tepung

@@ -1,0 +1,16 @@
+div{
+    background-color:blueviolet;
+    display: flex;
+    color: beige;
+}
+
+h1{
+    font-size: small;
+    color: aqua;
+}
+
+.div2{
+    background-color:lightgoldenrodyellow;
+    display: flex;
+    color:lightslategray;
+}
